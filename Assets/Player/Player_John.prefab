@@ -108,6 +108,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &-3990879913681648746
 Rigidbody2D:
   serializedVersion: 4
@@ -169,5 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Joystick: {fileID: 0}
   moveSpeed: 0
-  Sprite: {fileID: 0}
-  MagicWand: {fileID: 0}
+  sprite: {fileID: 0}
