@@ -757,6 +757,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2167456582192621789, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1432124816}
+    - target: {fileID: 2167456582192621789, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
+      propertyPath: Joystick
+      value: 
+      objectReference: {fileID: 1367266267}
+    - target: {fileID: 2167456582192621789, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
+      propertyPath: joyStick
+      value: 
+      objectReference: {fileID: 1367266267}
     - target: {fileID: 6602444619067568757, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
       propertyPath: Fire
       value: 
@@ -1254,7 +1266,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &667720776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,7 +2908,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1580783558
 SpriteRenderer:
   m_ObjectHideFlags: 0
