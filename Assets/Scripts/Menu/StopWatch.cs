@@ -7,17 +7,22 @@ public class StopWatch : MonoBehaviour
 {
     public float timeStart;
     public Text textBox;
+    private int minute = 0;
     // Start is called before the first frame update
     void Start()
     {
-        textBox.text = timeStart.ToString("F2");
-
+        textBox.text = minute + " : " + timeStart.ToString("F0");
     }
 
     // Update is called once per frame
     void Update()
     {
         timeStart += Time.deltaTime;
-        textBox.text = timeStart.ToString("F2");
+        if (timeStart >= 60)
+        {
+            timeStart = timeStart - 60;
+            minute += 1;
+        }
+        textBox.text = minute + " : " + timeStart.ToString("F0");
     }
 }
