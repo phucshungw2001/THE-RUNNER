@@ -11,10 +11,10 @@ public class Beta1 : MonoBehaviour
     private float attackSpeedBe1 = 3;
     private float expBe1 = 1;
     private float startTimeBtwShotsBe1 = 3;
-    private float timeBtwShotsBe1 = 3;
+    private float timeBtwShotsBe1 = 0;
     private float attackRangeBe1 = 4;
-    private float attackSpeedBulletBe1 = 3;
-    private float existenceTimeBulletBe1 = 1;
+    private float attackSpeedBulletBe1 = 2;
+    private float existenceTimeBulletBe1 = 2;
 
     private void Update()
     {
@@ -26,16 +26,6 @@ public class Beta1 : MonoBehaviour
             bloodBe1 += 3;
         }
     }
-    public float DamageBe11 { get => DamageBe1; set => DamageBe1 = value; }
-    public float BloodBe11 { get => BloodBe1; set => BloodBe1 = value; }
-    public float SpeedBe11 { get => SpeedBe1; set => SpeedBe1 = value; }
-    public float AttackSpeedBe11 { get => AttackSpeedBe1; set => AttackSpeedBe1 = value; }
-    public float ExpBe11 { get => ExpBe1; set => ExpBe1 = value; }
-    public float StartTimeBtwShotsBe11 { get => StartTimeBtwShotsBe1; set => StartTimeBtwShotsBe1 = value; }
-    public float TimeBtwShotsBe11 { get => TimeBtwShotsBe1; set => TimeBtwShotsBe1 = value; }
-    public float AttackRangeBe11 { get => AttackRangeBe1; set => AttackRangeBe1 = value; }
-    public float AttackSpeedBulletBe11 { get => AttackSpeedBulletBe1; set => AttackSpeedBulletBe1 = value; }
-    public float ExistenceTimeBulletBe11 { get => ExistenceTimeBulletBe1; set => ExistenceTimeBulletBe1 = value; }
     public float DamageBe1 { get => damageBe1; set => damageBe1 = value; }
     public float BloodBe1 { get => bloodBe1; set => bloodBe1 = value; }
     public float SpeedBe1 { get => speedBe1; set => speedBe1 = value; }
