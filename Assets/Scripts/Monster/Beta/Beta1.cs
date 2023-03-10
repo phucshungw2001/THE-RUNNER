@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Beta1 : MonoBehaviour
 {
+    private float count;
     private float damageBe1 = 2;
     private float bloodBe1 = 15;
     private float speedBe1 = 1;
@@ -15,6 +16,16 @@ public class Beta1 : MonoBehaviour
     private float attackSpeedBulletBe1 = 3;
     private float existenceTimeBulletBe1 = 1;
 
+    private void Update()
+    {
+        count += Time.deltaTime;
+        if (count >= 60)
+        {
+            count -= 60;
+            damageBe1 += 1;
+            bloodBe1 += 3;
+        }
+    }
     public float DamageBe11 { get => DamageBe1; set => DamageBe1 = value; }
     public float BloodBe11 { get => BloodBe1; set => BloodBe1 = value; }
     public float SpeedBe11 { get => SpeedBe1; set => SpeedBe1 = value; }
