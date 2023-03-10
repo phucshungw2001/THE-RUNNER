@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class FollowPlayerByBeta1 : MonoBehaviour
 {
-    public Transform player;
+    private GameObject player;
     /*public Transform shotpoint;
     public Transform gun;*/
     public GameObject MonsterBe1;
     private bool InRange;
     [SerializeField] private Beta1 be1;
-
     // Update is called once per frame
     void Update()
     {
+        //player = FindObjectOfType<PlayerPrefs>.position;
+        player = GameObject.FindGameObjectWithTag("Player");
         /*Vector3 Differance = player.position - gun.transform.position;
         float rotZ = Mathf.Atan2(Differance.y, Differance.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);*/
-        if (Vector2.Distance(transform.position, player.position) > be1.AttackRangeBe1)
+        if (Vector2.Distance(transform.position, player.transform.position) > be1.AttackRangeBe1)
         {
             InRange = true;
         }
@@ -31,7 +32,7 @@ public class FollowPlayerByBeta1 : MonoBehaviour
     {
         if (InRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, be1.SpeedBe1 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, be1.SpeedBe1 * Time.deltaTime);
         }
     }
 

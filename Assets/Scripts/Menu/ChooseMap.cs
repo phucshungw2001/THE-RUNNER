@@ -16,10 +16,12 @@ public class ChooseMap : MonoBehaviour
     public void BackFromMap1()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        Time.timeScale = 1;
     }
     public void BackFromMap2()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        Time.timeScale = 1;
     }
     // Start is called before the first frame update
     void Start()

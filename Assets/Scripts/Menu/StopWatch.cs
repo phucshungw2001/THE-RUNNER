@@ -8,6 +8,10 @@ public class StopWatch : MonoBehaviour
     public float timeStart;
     public Text textBox;
     private int minute = 0;
+
+    public int Minute { get => minute; set => minute = value; }
+
+
     // Start is called before the first frame update
     void Start()
     {
