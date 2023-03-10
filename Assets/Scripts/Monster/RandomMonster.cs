@@ -12,8 +12,6 @@ public class RandomMonster : MonoBehaviour
     [SerializeField] private StopWatch time;
     private float CountTime;
     int rate;
-    int a = 0;
-    float b;
 
     float xPosition = 0;
     float yPosition = 0;
@@ -54,7 +52,6 @@ public class RandomMonster : MonoBehaviour
         screenTop = upperRightCornerWorld.y;
 
         screenBottom = lowerLeftCornerWorld.y;
-        Time.timeScale = 10;
     }
 
     List<GameObject> MonsterObject = new List<GameObject>();
@@ -63,7 +60,6 @@ public class RandomMonster : MonoBehaviour
     {
         CountTime += Time.deltaTime;
         timeCreate = (float)(60.01 / (60 + (time.Minute * 10)));
-        b += Time.deltaTime;
         if (CountTime >= timeCreate)
         {
             rate = Random.Range(1, 4);
@@ -92,22 +88,18 @@ public class RandomMonster : MonoBehaviour
             if (rate == 1 || rate == 2 || rate == 3 || rate == 4 || rate == 0)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Al1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-                a += 1;
             }
             if (rate == 5)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Al2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-                a += 1;
             }
             if (rate == 6 || rate == 7 || rate == 8)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Be1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-                a += 1;
             }
             if (rate == 9)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Be2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-                a += 1;
             }
             CountTime = 0;
         }

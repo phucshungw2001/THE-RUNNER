@@ -5,27 +5,43 @@ using UnityEngine;
 public class FollowPlayerByBeta1 : MonoBehaviour
 {
     private GameObject player;
-    /*public Transform shotpoint;
-    public Transform gun;*/
     public GameObject MonsterBe1;
+    [SerializeField] GameObject bulletBe1;
     private bool InRange;
     [SerializeField] private Beta1 be1;
+    [SerializeField] SpriteRenderer sprite;
     // Update is called once per frame
     void Update()
     {
-        //player = FindObjectOfType<PlayerPrefs>.position;
         player = GameObject.FindGameObjectWithTag("Player");
-        /*Vector3 Differance = player.position - gun.transform.position;
-        float rotZ = Mathf.Atan2(Differance.y, Differance.x) * Mathf.Rad2Deg;
-        gun.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);*/
+        Vector3 differance = player.transform.position - transform.position;
+        float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
+        if (transform.position.x < player.transform.position.x)
+        {
+            sprite.flipX = false;
+        }
+        if (transform.position.x > player.transform.position.x)
+        {
+            sprite.flipX = true;
+        }
         if (Vector2.Distance(transform.position, player.transform.position) > be1.AttackRangeBe1)
         {
             InRange = true;
         }
-        else
+        if (Vector2.Distance(transform.position, player.transform.position) <= be1.AttackRangeBe1)
         {
             InRange = false;
+            if (be1.TimeBtwShotsBe1 <= 0)
+            {
+                Instantiate(bulletBe1, transform.position, Quaternion.Euler(0, 0, rotZ));
+                be1.TimeBtwShotsBe1 = be1.StartTimeBtwShotsBe1;
+            }
+            else
+            {
+                be1.TimeBtwShotsBe1 -= Time.deltaTime;
+            }
         }
+
     }
 
     void FixedUpdate()
