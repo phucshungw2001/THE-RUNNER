@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "IndexInfomaionPlayer", menuName = "Character")]
-public class Character : ScriptableObject
+[CreateAssetMenu(fileName = "IndexInfomaionCharacterJohn", menuName = "CharacterJohn")]
+public class CharacterJohn : ScriptableObject
 {
     public string characterName;
-    public Sprite SpriteRenderer;
     public float blood;
     public float bloodMax;
     public float level;
