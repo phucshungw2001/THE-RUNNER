@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class FollowCharactor : MonoBehaviour
 {
-    public Transform player;
-    private float AttackRangeal1 = 1;
-    public GameObject Monsteral1;
-    private bool InRange;
+    private GameObject player;
+    public GameObject Monstera1;
     [SerializeField] private Alpha al1;
-    private float AttackRangeal2 = 1;
-    public GameObject Monsteral2;
-    [SerializeField] private Alpha2 al2;
-
+    [SerializeField] SpriteRenderer sprite;
+    bool InRange;
+    // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) > AttackRangeal2)
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (transform.position.x < player.transform.position.x)
         {
-            InRange = true;
+            sprite.flipX = false;
         }
-        else
+        if (transform.position.x > player.transform.position.x)
         {
-            InRange = false;
+            sprite.flipX = true;
         }
-        if (Vector2.Distance(transform.position, player.position) > AttackRangeal1)
+        if (Vector2.Distance(transform.position, player.transform.position) > al1.AttackRangea11)
         {
             InRange = true;
         }
@@ -37,18 +36,8 @@ public class FollowCharactor : MonoBehaviour
     {
         if (InRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, al2.Speed2 * Time.deltaTime);
-        }
-        if (InRange)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, al1.Speed1 * Time.deltaTime);
-        }
-    }
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, al1.Speed1 * Time.deltaTime);
 
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, AttackRangeal1);
-        Gizmos.color = Color.red;
-
+        }
     }
 }
