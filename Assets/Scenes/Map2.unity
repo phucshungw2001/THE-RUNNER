@@ -3461,6 +3461,7 @@ GameObject:
   - component: {fileID: 1813232348}
   - component: {fileID: 1813232351}
   - component: {fileID: 1813232352}
+  - component: {fileID: 1813232353}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3643,6 +3644,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTransform: {fileID: 329299338}
+--- !u!114 &1813232353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813232347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02bde98e32f3fb54f8ebac8a3c44472e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 124013410}
 --- !u!1 &1818316613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,8 +4019,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076091587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4224, y: -0.0221, z: 0}
-  m_LocalScale: {x: 3.8214302, y: 5.9370255, z: 1}
+  m_LocalPosition: {x: 0.7859, y: 0.129, z: 0}
+  m_LocalScale: {x: 2.9278228, y: 4.169859, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
