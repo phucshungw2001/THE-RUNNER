@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: IndexInfomaionPlayer
-  m_EditorClassIdentifier: Assembly-CSharp::Character
+  m_Script: {fileID: 11500000, guid: 3ee7d9eb22d4f064299dece888c8e819, type: 3}
+  m_Name: IndexInfomaionCharacterJohn
+  m_EditorClassIdentifier: 
   characterName: John
-  SpriteRenderer: {fileID: 21300000, guid: 6a1bc5833f45809498821236898cba97, type: 3}
   blood: 100
   bloodMax: 100
   level: 1
