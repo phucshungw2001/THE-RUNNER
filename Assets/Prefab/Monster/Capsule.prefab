@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4945695269753995941}
   - component: {fileID: -2936907841882910911}
   - component: {fileID: 636599823412869564}
+  - component: {fileID: -490699896196711850}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6021544913417063015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3498, y: -0.5906, z: 0}
-  m_LocalScale: {x: 0.054911237, y: 0.07233205, z: 1}
+  m_LocalPosition: {x: -1.29693, y: -0.64296, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 610274254, guid: b3d3d01de4ee9f7479190ff3cd41f8a8, type: 3}
+  m_Color: {r: 0, g: 0.76475954, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,3 +121,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   be1: {fileID: 2526260467156350246, guid: 02f4a3b0906829c4ba913c8b2c65cb27, type: 3}
+--- !u!58 &-490699896196711850
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021544913417063015}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.12
