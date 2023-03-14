@@ -235,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &401461524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0ac66e3f19dc30f4eafa587e976ad199, type: 3}
@@ -859,10 +859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef47f9357a8af2a4caab5854bcf55430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Al1: {fileID: 7947841920153660531, guid: 28ccfadc0b5692c4a909606254952a5b, type: 3}
-  Al2: {fileID: 852166346054089181, guid: 32f2f81bc1936c247ababba1d3d382f4, type: 3}
-  Be1: {fileID: 7947841920153660531, guid: 28ccfadc0b5692c4a909606254952a5b, type: 3}
-  Be2: {fileID: 3080372149382782717, guid: 16b9859d8c1b7904db77d5f1d5b37c9c, type: 3}
+  Al1: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Al2: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Be1: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Be2: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
   time: {fileID: 519420035}
 --- !u!1001 &522546985
 PrefabInstance:
