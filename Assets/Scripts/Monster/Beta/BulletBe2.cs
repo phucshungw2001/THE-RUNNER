@@ -17,7 +17,7 @@ public class BulletBe2 : MonoBehaviour
         transform.Translate(Vector2.right * be2.AttackSpeedBulletBe2 * Time.deltaTime);
     }
 
-    void DestroyBulletBe1()
+    void DestroyBulletBe2()
     {
         Destroy(gameObject);
     }
