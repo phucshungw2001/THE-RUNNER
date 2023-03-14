@@ -13,8 +13,8 @@ public class Beta1 : MonoBehaviour
     private float startTimeBtwShotsBe1 = 3;
     private float timeBtwShotsBe1 = 0;
     private float attackRangeBe1 = 4;
-    private float attackSpeedBulletBe1 = 2;
-    private float existenceTimeBulletBe1 = 2;
+    private float attackSpeedBulletBe1 = 3;
+    private float existenceTimeBulletBe1 = 3;
 
     private void Update()
     {
@@ -23,7 +23,6 @@ public class Beta1 : MonoBehaviour
         {
             count -= 60;
             damageBe1 += 1;
-            bloodBe1 += 3;
         }
     }
     public float DamageBe1 { get => damageBe1; set => damageBe1 = value; }
