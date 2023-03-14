@@ -235,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &401461524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0ac66e3f19dc30f4eafa587e976ad199, type: 3}
@@ -846,6 +846,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1206720260}
+<<<<<<< HEAD
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef47f9357a8af2a4caab5854bcf55430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Al1: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Al2: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Be1: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  Be2: {fileID: 4796170365096853493, guid: 71f8a2932c8a4f749863edd8fbf66f03, type: 3}
+  time: {fileID: 519420035}
+=======
+>>>>>>> 88c2a3ed347a1582251c914d7fe5517982fa85d7
 --- !u!1001 &522546985
 PrefabInstance:
   m_ObjectHideFlags: 0

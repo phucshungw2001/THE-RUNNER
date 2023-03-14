@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 8015488943610210002}
   - component: {fileID: 7023107977862284742}
   - component: {fileID: -1646772651712828204}
+  - component: {fileID: -1778243871223151669}
+  - component: {fileID: 1227181479267459144}
   m_Layer: 0
-  m_Name: Golem_01_Attacking_000
+  m_Name: a2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,3 +121,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.1999993, y: 4.7999997, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1778243871223151669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852166346054089181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa49eb138cec6f14a900454dc9abf04c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1227181479267459144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852166346054089181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b1c9f848322c74e9157ef8e2f46129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monstera2: {fileID: 852166346054089181}
+  al2: {fileID: -1778243871223151669}
+  sprite: {fileID: 8015488943610210002}
