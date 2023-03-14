@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    private float volume;
+
+    public float Volume { get => volume; set => volume = value; }
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class SoundManager : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        volume = volumeSlider.value;
     } 
 
     private void Load()
