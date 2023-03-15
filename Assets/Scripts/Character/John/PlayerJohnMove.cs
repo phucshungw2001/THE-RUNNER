@@ -17,8 +17,10 @@ public class PlayerJohnMove : MonoBehaviour
 
     PlayerMove player = new PlayerMove();
 
+    public CharacterJohn John;
     void Start()
     {
+        Debug.Log("" + John.characterName);
         playerAnimator = GetComponent<Animator>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
