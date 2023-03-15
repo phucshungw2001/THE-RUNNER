@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class ChangeSound : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] SoundManager sound;
     [SerializeField] AudioSource audioSource;
     void Start()
     {
-        audioSource.volume = sound.Volume;
+        string text = File.ReadAllText(Application.dataPath + "/File/data.txt");
+        int v = int.Parse(text);
+        audioSource.volume = v;
     }
 
     // Update is called once per frame

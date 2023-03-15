@@ -83,8 +83,9 @@ public class RandomMonster : MonoBehaviour
                 xPosition = Random.Range(screenLeft, screenRight);
                 yPosition = Random.Range(screenBottom, (screenBottom + 1));
             }
+
             rate = Random.Range(0, 10);
-            Debug.Log(rate);
+
             if (rate == 1 || rate == 2 || rate == 3 || rate == 4 || rate == 0)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Al1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));

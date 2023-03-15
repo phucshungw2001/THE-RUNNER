@@ -1,15 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
-    private float volume;
-
-    public float Volume { get => volume; set => volume = value; }
 
     void Start()
     {
@@ -33,11 +31,15 @@ public class SoundManager : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-        volume = volumeSlider.value;
     } 
 
     private void Load()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        string path = Application.dataPath + "/File/data.txt";
+        File.WriteAllText(path, "");
+        //Write some text to the test.txt file
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(volumeSlider.value);
     }
 }
