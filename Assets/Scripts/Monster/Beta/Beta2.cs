@@ -5,9 +5,9 @@ using UnityEngine;
 public class Beta2 : MonoBehaviour
 {
     private float count;
-    private float damageBe2 = 2;
-    private float bloodBe2 = 50;
-    private float speedBe2 = 1;
+    private float damageBe2 = 4;
+    private float bloodBe2 = 15;
+    private float speedBe2 = 2;
     private float attackSpeedBe2 = 3;
     private float expBe2 = 5;
     private float startTimeBtwShotsBe2 = 3;

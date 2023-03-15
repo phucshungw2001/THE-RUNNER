@@ -10,6 +10,7 @@ public class FollowPlayerByBeta1 : MonoBehaviour
     private bool InRange;
     [SerializeField] private Beta1 be1;
     [SerializeField] SpriteRenderer sprite;
+    public GameObject expBe1;
     // Update is called once per frame
     void Update()
     {
@@ -57,5 +58,13 @@ public class FollowPlayerByBeta1 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, be1.AttackRangeBe1);
         Gizmos.color = Color.red;
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
+        {
+            Destroy(gameObject);
+            Instantiate(expBe1, transform.position, Quaternion.identity);
+        }
     }
 }
