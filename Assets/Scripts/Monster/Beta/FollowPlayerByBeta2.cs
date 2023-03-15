@@ -10,7 +10,7 @@ public class FollowPlayerByBeta2 : MonoBehaviour
     private bool InRange;
     [SerializeField] private Beta2 be2;
     [SerializeField] SpriteRenderer sprite;
-    public GameObject expBe2;
+   // public GameObject expBe2;
     // Update is called once per frame
     void Update()
     {
@@ -64,7 +64,7 @@ public class FollowPlayerByBeta2 : MonoBehaviour
         if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
         {
             Destroy(gameObject);
-            Instantiate(expBe2, transform.position, Quaternion.identity);
+           // Instantiate(expBe2, transform.position, Quaternion.identity);
         }
     }
 }
