@@ -18,4 +18,4 @@ MonoBehaviour:
   level: 1
   exp: 30
   expMax: 0
-  moveSpeed: 3
+  moveSpeed: 4

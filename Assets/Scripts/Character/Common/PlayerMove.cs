@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove
 {
@@ -19,6 +18,14 @@ public class PlayerMove
             sprite.flipX = true;
         }
     }
-    #endregion
 
+
+    #endregion
+    public void SetHealth(Slider slider, float health, float maxhealth)
+    {
+        slider.gameObject.SetActive(health < maxhealth);
+        slider.value = health;
+        slider.maxValue = maxhealth;
+
+    }
 }
