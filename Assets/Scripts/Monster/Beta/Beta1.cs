@@ -7,7 +7,7 @@ public class Beta1 : MonoBehaviour
     private float count;
     private float damageBe1 = 2;
     private float bloodBe1 = 15;
-    private float speedBe1 = 1;
+    private float speedBe1 = 2;
     private float attackSpeedBe1 = 3;
     private float expBe1 = 1;
     private float startTimeBtwShotsBe1 = 3;
