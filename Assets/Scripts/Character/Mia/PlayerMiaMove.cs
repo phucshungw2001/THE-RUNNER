@@ -26,6 +26,8 @@ public class PlayerMiaMove : MonoBehaviour
         slider.maxValue = Mia.bloodMax;
         Mia.level = 1;
         Mia.exp = 0;
+        Mia.damage = 20;
+        Mia.atkSpeed = 1.5f;
         Mia.expMax = 30;
         Mia.moveSpeed = 3;
         expSlider.value = Mia.exp;
