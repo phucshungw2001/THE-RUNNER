@@ -11,12 +11,10 @@ public class PlayerJohnMove : MonoBehaviour
 
     Vector2 move;
     Rigidbody2D rb2D;
-
+    public bool isLevelUp;
     PlayerMove player = new PlayerMove();
-
-
     public Slider slider;
-
+    public Slider expSlider;
     // Index infomation character John
     public CharacterJohn John;
 
@@ -27,6 +25,13 @@ public class PlayerJohnMove : MonoBehaviour
         John.blood = John.bloodMax;
         slider.value = John.blood;
         slider.maxValue = John.bloodMax;
+        John.level = 1;
+        John.exp = 0;
+        John.expMax = 30;
+        John.moveSpeed = 3;
+        expSlider.value = John.exp;
+        expSlider.maxValue = John.expMax;
+        this.isLevelUp = false;
     }
 
     void Update()
@@ -34,7 +39,25 @@ public class PlayerJohnMove : MonoBehaviour
         move.x = joyStick.Horizontal;
         move.y = joyStick.Vertical;
     }
-
+    public void AddExp(int exp)
+    {
+        John.exp += exp;
+        expSlider.value = John.exp;
+        expSlider.maxValue = John.expMax;
+        if (John.exp >= John.expMax)
+        {
+            LevelUp();
+        }
+    }
+    private void LevelUp()
+    {
+        John.level++;
+        John.exp = 0;
+        John.expMax = John.expMax * 2;
+        expSlider.value = John.exp;
+        expSlider.maxValue = John.expMax;
+        this.isLevelUp = true;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
