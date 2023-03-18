@@ -5,6 +5,8 @@ using UnityEngine;
 public class FollowPlayerByBeta2 : MonoBehaviour
 {
     private GameObject player;
+    private PlayerJohnMove playerInf;
+    private PlayerMiaMove playerInf2;
     public GameObject MonsterBe2;
     [SerializeField] GameObject bulletBe2;
     private bool InRange;
@@ -15,6 +17,8 @@ public class FollowPlayerByBeta2 : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerInf = FindObjectOfType<PlayerJohnMove>();
+        playerInf2 = FindObjectOfType<PlayerMiaMove>();
         Vector3 differance = player.transform.position - transform.position;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         if (transform.position.x < player.transform.position.x)
@@ -63,6 +67,14 @@ public class FollowPlayerByBeta2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
         {
+            if (playerInf != null)
+            {
+                playerInf.AddExp(10);
+            }
+            if (playerInf2 != null)
+            {
+                playerInf2.AddExp(10);
+            }
             Destroy(gameObject);
            // Instantiate(expBe2, transform.position, Quaternion.identity);
         }
