@@ -11,11 +11,10 @@ public class PlayerMiaMove : MonoBehaviour
 
     Vector2 move;
     Rigidbody2D rb2D;
-
+    public bool isLevelUp;
     PlayerMove player = new PlayerMove();
-
     public Slider slider;
-
+    public Slider expSlider;
     // Index infomation character Mia
     public CharacterMia Mia;
     void Start()
@@ -25,6 +24,15 @@ public class PlayerMiaMove : MonoBehaviour
         Mia.blood = Mia.bloodMax;
         slider.value = Mia.blood;
         slider.maxValue = Mia.bloodMax;
+        Mia.level = 1;
+        Mia.exp = 0;
+        Mia.damage = 20;
+        Mia.atkSpeed = 1.5f;
+        Mia.expMax = 30;
+        Mia.moveSpeed = 3;
+        expSlider.value = Mia.exp;
+        expSlider.maxValue = Mia.expMax;
+        this.isLevelUp = false;
     }
 
     void Update()
@@ -32,7 +40,25 @@ public class PlayerMiaMove : MonoBehaviour
         move.x = joyStick.Horizontal;
         move.y = joyStick.Vertical;
     }
-
+    public void AddExp(int exp)
+    {
+        Mia.exp += exp;
+        expSlider.value = Mia.exp;
+        expSlider.maxValue = Mia.expMax;
+        if (Mia.exp >= Mia.expMax)
+        {
+            LevelUp();
+        }
+    }
+    private void LevelUp()
+    {
+        Mia.level++;
+        Mia.exp = 0;
+        Mia.expMax = Mia.expMax * 2;
+        expSlider.value = Mia.exp;
+        expSlider.maxValue = Mia.expMax;
+        this.isLevelUp = true;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "monster")
