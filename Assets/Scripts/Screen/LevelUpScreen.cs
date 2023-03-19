@@ -162,11 +162,12 @@ public class LevelUpScreen : MonoBehaviour
 
     private void CloseLevelUpScreen()
     {
+        Debug.Log("bsdhvbsdssvv");
         // Hide the level up screen and resume the game
         image.enabled = false;
         Time.timeScale = 1f; // Resume the game
         player.isLevelUp = false;
-        player2.isLevelUp = false;
+       // player2.isLevelUp = false;
         isShowing = false;
     }
 }
