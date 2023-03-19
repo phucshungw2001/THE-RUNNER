@@ -12,4 +12,7 @@ public class CharacterMia : ScriptableObject
     public float exp;
     public float expMax;
     public float moveSpeed;
+    public float damage;
+    public float atkSpeed;
+    public float bulletSpeed;
 }

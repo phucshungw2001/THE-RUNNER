@@ -34,7 +34,6 @@ public class ParallaxBacground : MonoBehaviour
         if (infiniteHorizontal)
         {
 
-
             if (Mathf.Abs(cameraTranform.position.x - transform.position.x) >= posssitionX)
             {
                 float offset = (cameraTranform.position.x - transform.position.x) % posssitionX;

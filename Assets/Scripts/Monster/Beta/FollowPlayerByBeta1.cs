@@ -5,15 +5,20 @@ using UnityEngine;
 public class FollowPlayerByBeta1 : MonoBehaviour
 {
     private GameObject player;
+    private PlayerJohnMove playerInf;
+    private PlayerMiaMove playerInf2;
     public GameObject MonsterBe1;
     [SerializeField] GameObject bulletBe1;
     private bool InRange;
     [SerializeField] private Beta1 be1;
     [SerializeField] SpriteRenderer sprite;
+    //public GameObject expBe1;
     // Update is called once per frame
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerInf = FindObjectOfType<PlayerJohnMove>();
+        playerInf2 = FindObjectOfType<PlayerMiaMove>();
         Vector3 differance = player.transform.position - transform.position;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         if (transform.position.x < player.transform.position.x)
@@ -57,5 +62,21 @@ public class FollowPlayerByBeta1 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, be1.AttackRangeBe1);
         Gizmos.color = Color.red;
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
+        {
+            if (playerInf != null)
+            {
+                playerInf.AddExp(10);
+            }
+            if (playerInf2 != null)
+            {
+                playerInf2.AddExp(10);
+            }
+            Destroy(gameObject);
+            //Instantiate(expBe1, transform.position, Quaternion.identity);
+        }
     }
 }

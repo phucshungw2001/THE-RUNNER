@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: IndexInfomaionCharacterJohn
   m_EditorClassIdentifier: 
   characterName: John
-  blood: 100
+  blood: 0
   bloodMax: 100
   level: 1
   exp: 30
   expMax: 0
-  moveSpeed: 2
+  moveSpeed: 3

@@ -16,7 +16,7 @@ public class StopWatch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textBox.text = minute + " : " + timeStart.ToString("F0");
+        textBox.text = minute + ":" + timeStart.ToString("F0");
     }
 
     // Update is called once per frame
@@ -28,6 +28,6 @@ public class StopWatch : MonoBehaviour
             timeStart -= 60;
             minute += 1;
         }
-        textBox.text = minute + " : " + timeStart.ToString("F0");
+        textBox.text = minute + ":" + timeStart.ToString("F0");
     }
 }

@@ -16,6 +16,8 @@ MonoBehaviour:
   blood: 80
   bloodMax: 80
   level: 1
-  exp: 30
-  expMax: 0
+  exp: 0
+  expMax: 30
   moveSpeed: 3
+  damage: 20
+  atkSpeed: 1
