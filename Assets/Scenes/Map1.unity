@@ -427,6 +427,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1987199510}
     - target: {fileID: 2167456582192621789, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
+      propertyPath: isLevelUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167456582192621789, guid: fb3ea6839d9c22246852c963566a93a3, type: 3}
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -2225,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2601,7 +2605,7 @@ GameObject:
   - component: {fileID: 877595036}
   - component: {fileID: 877595037}
   - component: {fileID: 877595039}
-  - component: {fileID: 877595038}
+  - component: {fileID: 877595040}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -2678,24 +2682,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &877595038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877595035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba26cf752537180428da29a7f8e1a9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 710146917}
-  Sprite: {fileID: 877595037}
-  bulletPrefab: {fileID: 8228262289943639303, guid: 8affb5456e7455640b87d12410c54550, type: 3}
-  gunPosition: {fileID: 1445921344}
-  gunTip: {fileID: 67587316}
-  bulletSpeed: 5
 --- !u!95 &877595039
 Animator:
   serializedVersion: 5
@@ -2716,7 +2702,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &877595040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877595035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ebf7fe458684d43a59504d1ed9927a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 710146917}
+  Sprite: {fileID: 877595037}
+  bulletPrefab: {fileID: 8228262289943639303, guid: 8affb5456e7455640b87d12410c54550, type: 3}
+  gunPosition: {fileID: 1445921344}
+  gunTip: {fileID: 67587316}
+  bulletSpeed: 10
+  John: {fileID: 11400000, guid: 539929e2203862e4f8b1eb81eae44cae, type: 2}
 --- !u!1 &922430532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,6 +3388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUp
       objectReference: {fileID: 0}
+    - target: {fileID: 2856674502120448727, guid: 7433a28be6237ab4585918358405a219, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2856674502393702009, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_SizeDelta.x
       value: 110
@@ -3564,11 +3572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5115af024ce9f441badf5345fda792b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  image: {fileID: 0}
-  isShowing: 0
-  player: {fileID: 0}
-  player2: {fileID: 0}
 --- !u!1 &1503060423
 GameObject:
   m_ObjectHideFlags: 0
