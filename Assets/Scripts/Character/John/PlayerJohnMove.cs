@@ -30,6 +30,7 @@ public class PlayerJohnMove : MonoBehaviour
         John.exp = 0;
         John.expMax = 30;
         John.moveSpeed = 3;
+        John.bulletSpeed = 6;
         expSlider.value = John.exp;
         expSlider.maxValue = John.expMax;
         this.isLevelUp = false;
@@ -62,7 +63,8 @@ public class PlayerJohnMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "monster")
+        if (collision.gameObject.tag == "monster" || collision.gameObject.tag == "bulletBe1"
+            || collision.gameObject.tag == "bulletBe2")
         {
             John.blood = John.blood - 2;
             slider.value = John.blood;

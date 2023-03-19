@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IndexInfomaionCharacterJohn
   m_EditorClassIdentifier: 
   characterName: John
-  blood: -54
+  blood: 0
   bloodMax: 100
   level: 1
   exp: 30

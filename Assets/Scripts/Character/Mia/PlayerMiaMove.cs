@@ -27,9 +27,10 @@ public class PlayerMiaMove : MonoBehaviour
         Mia.level = 1;
         Mia.exp = 0;
         Mia.damage = 20;
-        Mia.atkSpeed = 1.5f;
+        Mia.atkSpeed = 1f;
         Mia.expMax = 30;
-        Mia.moveSpeed = 3;
+        Mia.moveSpeed = 4;
+        Mia.bulletSpeed = 9;
         expSlider.value = Mia.exp;
         expSlider.maxValue = Mia.expMax;
         this.isLevelUp = false;
@@ -61,7 +62,8 @@ public class PlayerMiaMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "monster")
+        if (collision.gameObject.tag == "monster" || collision.gameObject.tag == "bulletBe1" 
+            || collision.gameObject.tag == "bulletBe2")
         {
             Mia.blood = Mia.blood - 2;
             slider.value = Mia.blood;

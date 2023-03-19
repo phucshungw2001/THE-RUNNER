@@ -14,4 +14,5 @@ public class CharacterJohn : ScriptableObject
     public float moveSpeed;
     public float damage;
     public float atkSpeed;
+    public float bulletSpeed; 
 }

@@ -23,7 +23,6 @@ public class BulletBlackHold : MonoBehaviour
     {
         if (collision.gameObject.tag == "monster")
         {
-    
             Instantiate(BlackHold, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
