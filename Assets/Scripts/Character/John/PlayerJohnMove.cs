@@ -30,6 +30,7 @@ public class PlayerJohnMove : MonoBehaviour
         John.exp = 0;
         John.expMax = 30;
         John.moveSpeed = 3;
+        John.bulletSpeed = 6;
         expSlider.value = John.exp;
         expSlider.maxValue = John.expMax;
         this.isLevelUp = false;

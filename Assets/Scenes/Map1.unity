@@ -2719,7 +2719,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8228262289943639303, guid: 8affb5456e7455640b87d12410c54550, type: 3}
   gunPosition: {fileID: 1445921344}
   gunTip: {fileID: 67587316}
-  bulletSpeed: 10
   John: {fileID: 11400000, guid: 539929e2203862e4f8b1eb81eae44cae, type: 2}
 --- !u!1 &922430532
 GameObject:
@@ -3390,7 +3389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2856674502120448727, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2856674502393702009, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3569,9 +3568,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 186418417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5115af024ce9f441badf5345fda792b, type: 3}
+  m_Script: {fileID: 11500000, guid: 892d018acd6a8334fb80af07d7a22045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  image: {fileID: 0}
+  isShowing: 0
+  player: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1 &1503060423
 GameObject:
   m_ObjectHideFlags: 0

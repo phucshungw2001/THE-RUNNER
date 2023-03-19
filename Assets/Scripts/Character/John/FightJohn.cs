@@ -14,8 +14,6 @@ public class FightJohn : MonoBehaviour
     public Transform gunTip; // Vị trí đầu súng
     private float timeCreate;
 
-    public float bulletSpeed = 10f;
-
     public CharacterJohn John;
     private void Start()
     {
@@ -74,7 +72,7 @@ public class FightJohn : MonoBehaviour
 
                 // Cài đặt vận tốc của đạn theo hướng vừa tính toán được
                 Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-                bulletRigidbody.velocity = direction * bulletSpeed;
+                bulletRigidbody.velocity = direction * John.bulletSpeed;
 
             }
             if (move.x < 0)
@@ -90,7 +88,7 @@ public class FightJohn : MonoBehaviour
 
                 // Cài đặt vận tốc của đạn theo hướng vừa tính toán được
                 Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-                bulletRigidbody.velocity = direction * bulletSpeed;
+                bulletRigidbody.velocity = direction * John.bulletSpeed;
             }
         }
     }

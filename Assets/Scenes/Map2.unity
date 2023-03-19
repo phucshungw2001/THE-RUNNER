@@ -1770,7 +1770,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1879140859008348724, guid: ca4c07d4599a69742926284484969ca5, type: 3}
   gunPosition: {fileID: 2137069739}
   gunTip: {fileID: 1844995620}
-  bulletSpeed: 10
   Mia: {fileID: 11400000, guid: 9d7bf06e5e4b500489acdd4821a95845, type: 2}
 --- !u!1 &643347413
 GameObject:
@@ -3927,9 +3926,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1855756968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5115af024ce9f441badf5345fda792b, type: 3}
+  m_Script: {fileID: 11500000, guid: 892d018acd6a8334fb80af07d7a22045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  image: {fileID: 0}
+  isShowing: 0
+  player: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1001 &1861505854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4027,7 +4031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2856674502120448727, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2856674502393702009, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_SizeDelta.x

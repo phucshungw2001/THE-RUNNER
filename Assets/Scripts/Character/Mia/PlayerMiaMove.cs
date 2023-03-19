@@ -29,7 +29,8 @@ public class PlayerMiaMove : MonoBehaviour
         Mia.damage = 20;
         Mia.atkSpeed = 1f;
         Mia.expMax = 30;
-        Mia.moveSpeed = 3;
+        Mia.moveSpeed = 4;
+        Mia.bulletSpeed = 9;
         expSlider.value = Mia.exp;
         expSlider.maxValue = Mia.expMax;
         this.isLevelUp = false;
