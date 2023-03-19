@@ -54,7 +54,7 @@ public class PlayerJohnMove : MonoBehaviour
     {
         John.level++;
         John.exp = 0;
-        John.expMax = John.expMax * 2;
+        John.expMax = John.level*(John.level-1)*10+30;
         expSlider.value = John.exp;
         expSlider.maxValue = John.expMax;
         this.isLevelUp = true;

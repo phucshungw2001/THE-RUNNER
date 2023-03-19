@@ -54,7 +54,7 @@ public class PlayerMiaMove : MonoBehaviour
     {
         Mia.level++;
         Mia.exp = 0;
-        Mia.expMax = Mia.expMax * 2;
+        Mia.expMax = Mia.level * (Mia.level - 1) * 10 + 30;
         expSlider.value = Mia.exp;
         expSlider.maxValue = Mia.expMax;
         this.isLevelUp = true;
