@@ -22,7 +22,7 @@ public class StopWatch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Gamma") == null && GameObject.FindGameObjectWithTag("Delta") == null)
+        if (GameObject.FindGameObjectWithTag("Boss") == null)
         {
             timeStart += Time.deltaTime;
             if (timeStart >= 60)

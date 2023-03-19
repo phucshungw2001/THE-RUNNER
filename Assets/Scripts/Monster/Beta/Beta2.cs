@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Beta2 : MonoBehaviour
 {
-    [SerializeField] private StopWatch time;
+    //private StopWatch time;
     private float count;
     private float damageBe2 = 4;
     private float bloodBe2 = 15;
@@ -16,8 +16,7 @@ public class Beta2 : MonoBehaviour
     private float attackRangeBe2 = 4;
     private float attackSpeedBulletBe2 = 3;
     private float existenceTimeBulletBe2 = 3;
-
-    public float Count { get => count; set => count = value; }
+ 
     public float DamageBe2 { get => damageBe2; set => damageBe2 = value; }
     public float BloodBe2 { get => bloodBe2; set => bloodBe2 = value; }
     public float SpeedBe2 { get => speedBe2; set => speedBe2 = value; }
@@ -28,9 +27,4 @@ public class Beta2 : MonoBehaviour
     public float AttackRangeBe2 { get => attackRangeBe2; set => attackRangeBe2 = value; }
     public float AttackSpeedBulletBe2 { get => attackSpeedBulletBe2; set => attackSpeedBulletBe2 = value; }
     public float ExistenceTimeBulletBe2 { get => existenceTimeBulletBe2; set => existenceTimeBulletBe2 = value; }
-
-    private void Update()
-    {
-        damageBe2 = 4 + time.Minute;
-    }
 }

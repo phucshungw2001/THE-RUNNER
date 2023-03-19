@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c81ecd5433aa9e45945fdea19da4446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: {fileID: 0}
 --- !u!114 &625921282483908023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +138,7 @@ MonoBehaviour:
   bulletBe1: {fileID: 6021544913417063015, guid: 3029193a36ed1aa4699743565dc7fd43, type: 3}
   be1: {fileID: 2526260467156350246}
   sprite: {fileID: 5127493846156324065}
+  expBe1: {fileID: 5760973435430491347, guid: ef84c933b8b88d2438923bea5d3b84d9, type: 3}
 --- !u!61 &5206091111499616812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +149,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

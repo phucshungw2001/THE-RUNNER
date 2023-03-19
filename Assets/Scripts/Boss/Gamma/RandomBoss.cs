@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomBoss : MonoBehaviour
 {
     [SerializeField] public GameObject Gamma;
-    //[SerializeField] public GameObject Delta;
+    [SerializeField] public GameObject Delta;
     [SerializeField] private StopWatch time;
     int rate;
     float xPosition = 0;
@@ -15,7 +15,6 @@ public class RandomBoss : MonoBehaviour
     float screenLeft;
     float screenRight;
     float screenTop;
-    float screenBottom;
 
     void Start()
     {
@@ -45,27 +44,28 @@ public class RandomBoss : MonoBehaviour
         screenRight = upperRightCornerWorld.x;
 
         screenTop = upperRightCornerWorld.y;
-
-        screenBottom = lowerLeftCornerWorld.y;
+        Time.timeScale = 20;
     }
 
     List<GameObject> MonsterObject = new List<GameObject>();
 
     void Update()
     {
-        if (time.Minute % 5 == 0)
+        if (time.Minute % 5 == 0 && time.Minute != 0)
         {
+
             xPosition = Random.Range((screenLeft+screenRight)/2, (screenLeft + screenRight) / 2);
             yPosition = Random.Range(screenTop, (screenTop-1));
             rate = Random.Range(1, 3);
             if (rate == 1)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Gamma, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
+                
             }
-            /*if (rate == 2)
+            if (rate == 2)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Delta, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-            }*/
+            }
         }
-    }
+    } 
 }

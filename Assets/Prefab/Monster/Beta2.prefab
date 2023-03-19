@@ -118,7 +118,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714cd3c08fe37b84e9a31b362ba965d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: {fileID: 0}
 --- !u!114 &8358744372662796493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +163,4 @@ MonoBehaviour:
   bulletBe2: {fileID: 6021544913417063015, guid: 873722e6c2d245c4697d22726ba9d648, type: 3}
   be2: {fileID: 7400199896661330666}
   sprite: {fileID: 7424126777664062349}
+  expBe2: {fileID: 7289086537463553118, guid: e0aacd9fe925b634e979b2aa66b86116, type: 3}

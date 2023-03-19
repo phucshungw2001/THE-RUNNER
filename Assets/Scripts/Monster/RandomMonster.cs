@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RandomMonster : MonoBehaviour
@@ -8,6 +9,9 @@ public class RandomMonster : MonoBehaviour
     [SerializeField] public GameObject Al2;
     [SerializeField] public GameObject Be1;
     [SerializeField] public GameObject Be2;
+    [SerializeField] public Beta1 B1;
+    [SerializeField] public Beta2 B2;
+    [SerializeField] public Gamma Ga;
     private float timeCreate;
     [SerializeField] private StopWatch time;
     private float CountTime;
@@ -58,9 +62,13 @@ public class RandomMonster : MonoBehaviour
 
     void Update()
     {
+        B1.DamageBe1 = 2 + time.Minute;
+        B2.DamageBe2 = 4 + time.Minute;
+        Ga.DamageGa = 10 + (time.Minute / 5);
+        Ga.BloodGa = 450 + (time.Minute / 5);
         CountTime += Time.deltaTime;
         timeCreate = (float)(60.01 / (60 + (time.Minute * 10)));
-        if (CountTime >= timeCreate)
+        if (CountTime >= timeCreate && GameObject.FindGameObjectWithTag("Boss") == null)
         {
             rate = Random.Range(1, 4);
             if (rate == 1)
@@ -84,7 +92,6 @@ public class RandomMonster : MonoBehaviour
                 yPosition = Random.Range(screenBottom, (screenBottom + 1));
             }
             rate = Random.Range(0, 10);
-            Debug.Log(rate);
             if (rate == 1 || rate == 2 || rate == 3 || rate == 4 || rate == 0)
             {
                 MonsterObject.Add(Instantiate<GameObject>(Al1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));

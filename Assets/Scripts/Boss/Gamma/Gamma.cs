@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gamma : MonoBehaviour
 {
-    [SerializeField] private StopWatch time;
+    private StopWatch time;
     private float count;
     private float damageGa = 10;
     private float bloodGa = 450;
@@ -29,10 +29,4 @@ public class Gamma : MonoBehaviour
     public float AttackSpeedBulletGa { get => attackSpeedBulletGa; set => attackSpeedBulletGa = value; }
     public float ExistenceTimeBulletGa { get => existenceTimeBulletGa; set => existenceTimeBulletGa = value; }
 
-    private void Update()
-    {
-        Count += Time.deltaTime;
-        damageGa = 10 * (Count / 300);
-        damageGa = 10 * (time.Minute / 5);
-    }
 }
