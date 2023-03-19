@@ -16,15 +16,16 @@ public class PlayerJohnMove : MonoBehaviour
     public Slider expSlider;
     // Index infomation character John
     public CharacterJohn John;
-
+    
     void Start()
     {   
         playerAnimator = GetComponent<Animator>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        John.bloodMax = 100;
+        John.level = 1;
         John.blood = John.bloodMax;
         slider.value = John.blood;
         slider.maxValue = John.bloodMax;
-        John.level = 1;
         John.damage = 20;
         John.atkSpeed = 1.5f;
         John.exp = 0;
@@ -40,6 +41,12 @@ public class PlayerJohnMove : MonoBehaviour
     {
         move.x = joyStick.Horizontal;
         move.y = joyStick.Vertical;
+
+        if(John.blood <= 0)
+        {
+            Time.timeScale = 0;
+
+        }
     }
     public void AddExp(int exp)
     {
@@ -55,7 +62,7 @@ public class PlayerJohnMove : MonoBehaviour
     {
         John.level++;
         John.exp = 0;
-        John.expMax = John.expMax * 2;
+        John.expMax = John.level * (John.level - 1) * 10 + 30;
         expSlider.value = John.exp;
         expSlider.maxValue = John.expMax;
         this.isLevelUp = true;
