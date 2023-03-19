@@ -21,10 +21,11 @@ public class PlayerMiaMove : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        Mia.level = 1;
+        Mia.bloodMax = 80;
         Mia.blood = Mia.bloodMax;
         slider.value = Mia.blood;
         slider.maxValue = Mia.bloodMax;
-        Mia.level = 1;
         Mia.exp = 0;
         Mia.damage = 20;
         Mia.atkSpeed = 1f;
@@ -55,7 +56,7 @@ public class PlayerMiaMove : MonoBehaviour
     {
         Mia.level++;
         Mia.exp = 0;
-        Mia.expMax = Mia.expMax * 2;
+        Mia.expMax = Mia.level * (Mia.level - 1) * 10 + 30;
         expSlider.value = Mia.exp;
         expSlider.maxValue = Mia.expMax;
         this.isLevelUp = true;
