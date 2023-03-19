@@ -12,7 +12,6 @@ public class FollowPlayerByGamma : MonoBehaviour
     private bool InRange;
     [SerializeField] private Gamma gamma;
     [SerializeField] SpriteRenderer sprite;
-    public GameObject expGam;
     // Update is called once per frame
     void Update()
     {
@@ -61,22 +60,5 @@ public class FollowPlayerByGamma : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, gamma.AttackRangeGa);
         Gizmos.color = Color.red;
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
-        {
-            if (playerInf != null)
-            {
-                playerInf.AddExp(10);
-            }
-            if (playerInf2 != null)
-            {
-                playerInf2.AddExp(10);
-            }
-            Destroy(gameObject);
-            Instantiate(expGam, transform.position, Quaternion.identity);
-        }
     }
 }

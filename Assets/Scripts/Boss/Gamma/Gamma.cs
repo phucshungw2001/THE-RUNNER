@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "IndexInfomaionGamma", menuName = "Gamma")]
 public class Gamma : MonoBehaviour
 {
-    private StopWatch time;
     private float count;
     private float damageGa = 10;
     private float bloodGa = 450;
