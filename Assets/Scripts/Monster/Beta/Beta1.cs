@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Beta1 : MonoBehaviour
 {
+    [SerializeField] private StopWatch time;
     private float count;
     private float damageBe1 = 2;
     private float bloodBe1 = 15;
@@ -18,12 +19,7 @@ public class Beta1 : MonoBehaviour
 
     private void Update()
     {
-        count += Time.deltaTime;
-        if (count >= 60)
-        {
-            count -= 60;
-            damageBe1 += 1;
-        }
+        damageBe1 = 2 + time.Minute;
     }
     public float DamageBe1 { get => damageBe1; set => damageBe1 = value; }
     public float BloodBe1 { get => bloodBe1; set => bloodBe1 = value; }
