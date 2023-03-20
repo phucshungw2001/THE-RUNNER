@@ -136,6 +136,7 @@ MonoBehaviour:
   Monstera2: {fileID: 852166346054089181}
   al2: {fileID: -1778243871223151669}
   sprite: {fileID: 8015488943610210002}
+  expBe1: {fileID: 4735311292176686950, guid: 1337cb16dc4f02a418988085d0dce89d, type: 3}
 --- !u!61 &-3835123030152724490
 BoxCollider2D:
   m_ObjectHideFlags: 0

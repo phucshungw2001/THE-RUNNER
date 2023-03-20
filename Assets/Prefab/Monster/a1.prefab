@@ -136,6 +136,7 @@ MonoBehaviour:
   Monstera1: {fileID: 652339333932522921}
   al1: {fileID: 652339333932522933}
   sprite: {fileID: 652339333932522923}
+  expBe1: {fileID: 792592381065785644, guid: 56d029e2800bd2c4bb7830670b50cc37, type: 3}
 --- !u!50 &296553537670703941
 Rigidbody2D:
   serializedVersion: 4

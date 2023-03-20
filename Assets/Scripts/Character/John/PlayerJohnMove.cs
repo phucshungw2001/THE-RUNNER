@@ -71,7 +71,7 @@ public class PlayerJohnMove : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "monster" || collision.gameObject.tag == "bulletBe1"
-            || collision.gameObject.tag == "bulletBe2")
+            || collision.gameObject.tag == "bulletBe2" || collision.gameObject.tag == "bulletGa")
         {
             John.blood = John.blood - 2;
             slider.value = John.blood;
@@ -80,7 +80,7 @@ public class PlayerJohnMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "monster")
+        if(collision.gameObject.tag == "monster" || collision.gameObject.tag == "boss")
         {
             John.blood = John.blood - 2;
             slider.value = John.blood;

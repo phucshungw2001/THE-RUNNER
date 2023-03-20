@@ -2,25 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayerByBeta1 : MonoBehaviour
+public class FollowPlayerByGamma : MonoBehaviour
 {
     private GameObject player;
     private PlayerJohnMove playerInf;
     private PlayerMiaMove playerInf2;
-    public GameObject MonsterBe1;
-    [SerializeField] GameObject bulletBe1;
+    public GameObject Gamma;
+    [SerializeField] GameObject bulletGamma;
     private bool InRange;
-    [SerializeField] private Beta1 be1;
+    [SerializeField] private Gamma gamma;
     [SerializeField] SpriteRenderer sprite;
-    public GameObject expBe1;
+    
     // Update is called once per frame
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
         playerInf = FindObjectOfType<PlayerJohnMove>();
         playerInf2 = FindObjectOfType<PlayerMiaMove>();
-
         Vector3 differance = player.transform.position - transform.position;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         if (transform.position.x < player.transform.position.x)
@@ -31,21 +29,21 @@ public class FollowPlayerByBeta1 : MonoBehaviour
         {
             sprite.flipX = true;
         }
-        if (Vector2.Distance(transform.position, player.transform.position) > be1.AttackRangeBe1)
+        if (Vector2.Distance(transform.position, player.transform.position) > gamma.AttackRangeGa)
         {
             InRange = true;
         }
-        if (Vector2.Distance(transform.position, player.transform.position) <= be1.AttackRangeBe1)
+        if (Vector2.Distance(transform.position, player.transform.position) <= gamma.AttackRangeGa)
         {
             InRange = false;
-            if (be1.TimeBtwShotsBe1 <= 0)
+            if (gamma.TimeBtwShotsGa <= 0)
             {
-                Instantiate(bulletBe1, transform.position, Quaternion.Euler(0, 0, rotZ));
-                be1.TimeBtwShotsBe1 = be1.StartTimeBtwShotsBe1;
+                Instantiate(bulletGamma, transform.position, Quaternion.Euler(0, 0, rotZ));
+                gamma.TimeBtwShotsGa = gamma.StartTimeBtwShotsGa;
             }
             else
             {
-                be1.TimeBtwShotsBe1 -= Time.deltaTime;
+                gamma.TimeBtwShotsGa -= Time.deltaTime;
             }
         }
 
@@ -55,22 +53,13 @@ public class FollowPlayerByBeta1 : MonoBehaviour
     {
         if (InRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, be1.SpeedBe1 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, gamma.SpeedGa * Time.deltaTime);
         }
     }
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, be1.AttackRangeBe1);
+        Gizmos.DrawWireSphere(transform.position, gamma.AttackRangeGa);
         Gizmos.color = Color.red;
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
-        {
-            Destroy(gameObject);
-            Instantiate(expBe1, transform.position, Quaternion.identity);
-        }
     }
 }
