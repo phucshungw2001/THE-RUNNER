@@ -16,7 +16,8 @@ public class PlayerJohnMove : MonoBehaviour
     public Slider expSlider;
     // Index infomation character John
     public CharacterJohn John;
-    
+    public BossGamma Gamma;
+
     void Start()
     {   
         playerAnimator = GetComponent<Animator>();
@@ -76,16 +77,15 @@ public class PlayerJohnMove : MonoBehaviour
             John.blood = John.blood - 2;
             slider.value = John.blood;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "monster" || collision.gameObject.tag == "boss")
+        if (collision.gameObject.tag == "boss" || collision.gameObject.tag == "bulletGa"
+       )
         {
-            John.blood = John.blood - 2;
+            John.blood = John.blood - Gamma.damageGa;
             slider.value = John.blood;
         }
     }
+
 
 
     private void FixedUpdate()
