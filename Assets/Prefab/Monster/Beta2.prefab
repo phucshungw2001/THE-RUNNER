@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7393135079091229704}
   - component: {fileID: 7400199896661330666}
   - component: {fileID: 8358744372662796493}
+  - component: {fileID: -7999926875833716544}
   m_Layer: 0
   m_Name: Beta2
   m_TagString: monster
@@ -162,3 +163,24 @@ MonoBehaviour:
   bulletBe2: {fileID: 6021544913417063015, guid: 873722e6c2d245c4697d22726ba9d648, type: 3}
   be2: {fileID: 7400199896661330666}
   sprite: {fileID: 7424126777664062349}
+--- !u!50 &-7999926875833716544
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062979879220040566}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

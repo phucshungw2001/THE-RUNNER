@@ -6,6 +6,8 @@ public class FollowCharactorA2 : MonoBehaviour
 {
     private GameObject player;
     public GameObject Monstera2;
+    private PlayerJohnMove playerInf;
+    private PlayerMiaMove playerInf2;
     [SerializeField] private Alpha2 al2;
     [SerializeField] SpriteRenderer sprite;
     bool InRange;
@@ -13,6 +15,11 @@ public class FollowCharactorA2 : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+
+        playerInf = FindObjectOfType<PlayerJohnMove>();
+        playerInf2 = FindObjectOfType<PlayerMiaMove>();
+
         if (transform.position.x < player.transform.position.x)
         {
             sprite.flipX = false;
@@ -36,6 +43,23 @@ public class FollowCharactorA2 : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, al2.Speed2 * Time.deltaTime);
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
+        {
+            if (playerInf != null)
+            {
+                playerInf.AddExp(10);
+            }
+            if (playerInf2 != null)
+            {
+                playerInf2.AddExp(10);
+            }
+            Destroy(gameObject);
+            //Instantiate(expBe1, transform.position, Quaternion.identity);
         }
     }
 }

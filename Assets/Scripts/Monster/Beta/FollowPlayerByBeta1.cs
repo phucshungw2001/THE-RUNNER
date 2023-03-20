@@ -17,8 +17,10 @@ public class FollowPlayerByBeta1 : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
         playerInf = FindObjectOfType<PlayerJohnMove>();
         playerInf2 = FindObjectOfType<PlayerMiaMove>();
+
         Vector3 differance = player.transform.position - transform.position;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         if (transform.position.x < player.transform.position.x)
