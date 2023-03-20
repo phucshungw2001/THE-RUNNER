@@ -3319,6 +3319,7 @@ GameObject:
   - component: {fileID: 1432833745}
   - component: {fileID: 1432833744}
   - component: {fileID: 1432833743}
+  - component: {fileID: 1432833747}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3417,6 +3418,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1432833747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432833742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b70de15e6be74c4a92f74fdcd000915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mia: {fileID: 11400000, guid: 9d7bf06e5e4b500489acdd4821a95845, type: 2}
+  NewOrQuit: {fileID: 1683943525}
 --- !u!1 &1439720552
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,10 +4629,14 @@ PrefabInstance:
     - target: {fileID: 2856674502393702014, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1855756970}
     - target: {fileID: 2856674502393702014, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradeAtkDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856674502393702014, guid: 7433a28be6237ab4585918358405a219, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpMia, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2856674502444092422, guid: 7433a28be6237ab4585918358405a219, type: 3}
       propertyPath: m_SizeDelta.x
