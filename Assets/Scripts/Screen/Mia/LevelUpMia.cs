@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class LevelUpMia : MonoBehaviour
 {
     public Canvas canvas;
