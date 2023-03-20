@@ -163,6 +163,7 @@ MonoBehaviour:
   bulletBe2: {fileID: 6021544913417063015, guid: 873722e6c2d245c4697d22726ba9d648, type: 3}
   be2: {fileID: 7400199896661330666}
   sprite: {fileID: 7424126777664062349}
+  expBe2: {fileID: 4735311292176686950, guid: 1337cb16dc4f02a418988085d0dce89d, type: 3}
 --- !u!50 &-7999926875833716544
 Rigidbody2D:
   serializedVersion: 4

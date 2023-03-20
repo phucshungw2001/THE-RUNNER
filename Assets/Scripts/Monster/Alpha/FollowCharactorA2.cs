@@ -11,6 +11,7 @@ public class FollowCharactorA2 : MonoBehaviour
     [SerializeField] private Alpha2 al2;
     [SerializeField] SpriteRenderer sprite;
     bool InRange;
+    public GameObject expBe1;
     // Update is called once per frame
     void Update()
     {
@@ -50,16 +51,8 @@ public class FollowCharactorA2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
         {
-            if (playerInf != null)
-            {
-                playerInf.AddExp(10);
-            }
-            if (playerInf2 != null)
-            {
-                playerInf2.AddExp(10);
-            }
             Destroy(gameObject);
-            //Instantiate(expBe1, transform.position, Quaternion.identity);
+            Instantiate(expBe1, transform.position, Quaternion.identity);
         }
     }
 }

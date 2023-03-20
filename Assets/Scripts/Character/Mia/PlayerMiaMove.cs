@@ -17,6 +17,7 @@ public class PlayerMiaMove : MonoBehaviour
     public Slider expSlider;
     // Index infomation character Mia
     public CharacterMia Mia;
+    public BossGamma Gamma;
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
@@ -69,18 +70,15 @@ public class PlayerMiaMove : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "monster" || collision.gameObject.tag == "bulletBe1" 
-            || collision.gameObject.tag == "bulletBe2")
+            || collision.gameObject.tag == "bulletBe2" )
         {
             Mia.blood = Mia.blood - 2;
             slider.value = Mia.blood;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "monster")
+        if (collision.gameObject.tag == "boss" || collision.gameObject.tag == "bulletGa"
+           )
         {
-            Mia.blood = Mia.blood - 2;
+            Mia.blood = Mia.blood - Gamma.damageGa;
             slider.value = Mia.blood;
         }
     }

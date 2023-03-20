@@ -24,6 +24,13 @@ public class RandomMonster : MonoBehaviour
 
     void Start()
     {
+        
+    }
+
+    List<GameObject> MonsterObject = new List<GameObject>();
+
+    void Update()
+    {
         screenWidth = Screen.width;
 
         screenHeight = Screen.height;
@@ -52,56 +59,53 @@ public class RandomMonster : MonoBehaviour
         screenTop = upperRightCornerWorld.y;
 
         screenBottom = lowerLeftCornerWorld.y;
-    }
 
-    List<GameObject> MonsterObject = new List<GameObject>();
-
-    void Update()
-    {
-        CountTime += Time.deltaTime;
-        timeCreate = (float)(60.01 / (60 + (time.Minute * 10)));
-        if (CountTime >= timeCreate)
+        if (GameObject.FindGameObjectWithTag("boss") == null)
         {
-            rate = Random.Range(1, 4);
-            if (rate == 1)
+            CountTime += Time.deltaTime;
+            timeCreate = (float)(60.01 / (60 + (time.Minute * 10)));
+            if (CountTime >= timeCreate)
             {
-                xPosition = Random.Range(screenLeft, (screenLeft + 1));
-                yPosition = Random.Range(screenBottom, screenTop);
+                rate = Random.Range(1, 4);
+                if (rate == 1)
+                {
+                    xPosition = Random.Range(screenLeft, (screenLeft + 1));
+                    yPosition = Random.Range(screenBottom, screenTop);
+                }
+                if (rate == 2)
+                {
+                    xPosition = Random.Range(screenLeft, screenRight);
+                    yPosition = Random.Range((screenTop - 1), screenTop);
+                }
+                if (rate == 3)
+                {
+                    xPosition = Random.Range((screenRight - 1), screenRight);
+                    yPosition = Random.Range(screenBottom, screenTop);
+                }
+                if (rate == 4)
+                {
+                    xPosition = Random.Range(screenLeft, screenRight);
+                    yPosition = Random.Range(screenBottom, (screenBottom + 1));
+                }
+                rate = Random.Range(0, 10);
+                if (rate == 1 || rate == 2 || rate == 3 || rate == 4 || rate == 0)
+                {
+                    MonsterObject.Add(Instantiate<GameObject>(Al1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
+                }
+                if (rate == 5)
+                {
+                    MonsterObject.Add(Instantiate<GameObject>(Al2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
+                }
+                if (rate == 6 || rate == 7 || rate == 8)
+                {
+                    MonsterObject.Add(Instantiate<GameObject>(Be1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
+                }
+                if (rate == 9)
+                {
+                    MonsterObject.Add(Instantiate<GameObject>(Be2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
+                }
+                CountTime = 0;
             }
-            if (rate == 2)
-            {
-                xPosition = Random.Range(screenLeft, screenRight);
-                yPosition = Random.Range((screenTop - 1), screenTop);
-            }
-            if (rate == 3)
-            {
-                xPosition = Random.Range((screenRight - 1), screenRight);
-                yPosition = Random.Range(screenBottom, screenTop);
-            }
-            if (rate == 4)
-            {
-                xPosition = Random.Range(screenLeft, screenRight);
-                yPosition = Random.Range(screenBottom, (screenBottom + 1));
-            }
-            rate = Random.Range(0, 10);
-            Debug.Log(rate);
-            if (rate == 1 || rate == 2 || rate == 3 || rate == 4 || rate == 0)
-            {
-                MonsterObject.Add(Instantiate<GameObject>(Al1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-            }
-            if (rate == 5)
-            {
-                MonsterObject.Add(Instantiate<GameObject>(Al2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-            }
-            if (rate == 6 || rate == 7 || rate == 8)
-            {
-                MonsterObject.Add(Instantiate<GameObject>(Be1, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-            }
-            if (rate == 9)
-            {
-                MonsterObject.Add(Instantiate<GameObject>(Be2, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
-            }
-            CountTime = 0;
         }
     }   
 }
