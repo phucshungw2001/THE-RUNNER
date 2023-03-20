@@ -12,7 +12,7 @@ public class RandomBoss : MonoBehaviour
     [SerializeField] public GameObject main;
     [SerializeField] public GameObject HPBoss;
     private int count = 1;
-    int a = 2;
+    int a = 5;
     int rate;
     float xPosition = 0;
     float yPosition = 0;
@@ -23,6 +23,12 @@ public class RandomBoss : MonoBehaviour
     float screenTop;
 
     void Start()
+    {
+    }
+
+    List<GameObject> MonsterObject = new List<GameObject>();
+
+    void Update()
     {
         screenWidth = Screen.width;
 
@@ -51,13 +57,6 @@ public class RandomBoss : MonoBehaviour
 
         screenTop = upperRightCornerWorld.y;
 
-        Time.timeScale = 10;
-    }
-
-    List<GameObject> MonsterObject = new List<GameObject>();
-
-    void Update()
-    {
         if ((int)time.Minute == a && count == 1)
         {
             main.SetActive(false);
@@ -74,7 +73,7 @@ public class RandomBoss : MonoBehaviour
                 MonsterObject.Add(Instantiate<GameObject>(Delta, new Vector3(xPosition, yPosition, 0), Quaternion.identity));
             }
             count = 0;
-            a += 2;
+            a += 5;
         }
 
         if (GameObject.FindGameObjectWithTag("Boss") == null && count == 0)

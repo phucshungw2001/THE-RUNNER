@@ -28,6 +28,12 @@ public class RandomMonster : MonoBehaviour
 
     void Start()
     {
+    }
+
+    List<GameObject> MonsterObject = new List<GameObject>();
+
+    void Update()
+    {
         screenWidth = Screen.width;
 
         screenHeight = Screen.height;
@@ -56,12 +62,7 @@ public class RandomMonster : MonoBehaviour
         screenTop = upperRightCornerWorld.y;
 
         screenBottom = lowerLeftCornerWorld.y;
-    }
 
-    List<GameObject> MonsterObject = new List<GameObject>();
-
-    void Update()
-    {
         B1.DamageBe1 = 2 + time.Minute;
         B2.DamageBe2 = 4 + time.Minute;
         Ga.DamageGa = 10 + (time.Minute / 5);
