@@ -16,7 +16,7 @@ public class HpBoss : MonoBehaviour
     {
         HP.maxValue = boss.bloodMax;
         boss.bloodGa = boss.bloodMax;
-      }
+    }
 
     void Update()
     {

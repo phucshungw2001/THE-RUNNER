@@ -23,7 +23,6 @@ public class GammaAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Debug.Log(hp);
         
     }
     void OnTriggerEnter2D(Collider2D collision)
