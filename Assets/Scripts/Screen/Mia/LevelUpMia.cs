@@ -62,7 +62,7 @@ public class LevelUpMia : MonoBehaviour
                     if (child != null)
                         if (child.CompareTag("levelTxt"))
                         {
-                            child.GetComponent<TextMeshProUGUI>().text = "You are now level " + player.John.level;
+                            child.GetComponent<TextMeshProUGUI>().text = "You are now level " + player2.Mia.level;
                         }
                     child.SetActive(true);
                 }

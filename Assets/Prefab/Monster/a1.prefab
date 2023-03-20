@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5708744458826096648}
   - component: {fileID: 6303237780932720066}
   - component: {fileID: 1123233251434707795}
+  - component: {fileID: -4450410880287307607}
   m_Layer: 0
   m_Name: a1
   m_TagString: monster
@@ -161,3 +162,24 @@ MonoBehaviour:
   Monstera1: {fileID: 4796170365096853493}
   al1: {fileID: 6303237780932720066}
   sprite: {fileID: 6886644642076016384}
+--- !u!50 &-4450410880287307607
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796170365096853493}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

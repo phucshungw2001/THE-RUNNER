@@ -3615,7 +3615,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1198231598}
         m_TargetAssemblyTypeName: ChooseMap, Assembly-CSharp
-        m_MethodName: BackFromMap2
+        m_MethodName: BackFromMap1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2526260467156350246}
   - component: {fileID: 625921282483908023}
   - component: {fileID: 5206091111499616812}
+  - component: {fileID: -6166566297579033414}
   m_Layer: 0
   m_Name: Beta1
   m_TagString: monster
@@ -163,6 +164,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9112418, y: 2.5134573}
   m_EdgeRadius: 0
+--- !u!50 &-6166566297579033414
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697823285630668330}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4804071505519963020
 GameObject:
   m_ObjectHideFlags: 0
