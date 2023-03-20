@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "IndexInfomaionGamma", menuName = "Gamma")]
+[CreateAssetMenu(fileName = "IndexInfomaionGamma", menuName = "BossGamma")]
 public class BossGamma : ScriptableObject
 {
     public float bloodGa = 0;
