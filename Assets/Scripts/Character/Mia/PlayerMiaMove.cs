@@ -41,6 +41,11 @@ public class PlayerMiaMove : MonoBehaviour
     {
         move.x = joyStick.Horizontal;
         move.y = joyStick.Vertical;
+
+        if (Mia.blood <= 0)
+        {
+            Time.timeScale = 0;
+        }
     }
     public void AddExp(int exp)
     {
