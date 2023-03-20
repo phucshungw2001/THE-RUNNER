@@ -78,6 +78,15 @@ public class PlayerJohnMove : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "monster")
+        {
+            John.blood = John.blood - 2;
+            slider.value = John.blood;
+        }
+    }
+
 
     private void FixedUpdate()
     {

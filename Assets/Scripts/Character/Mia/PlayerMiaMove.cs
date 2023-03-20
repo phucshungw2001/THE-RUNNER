@@ -71,6 +71,15 @@ public class PlayerMiaMove : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "monster")
+        {
+            Mia.blood = Mia.blood - 2;
+            slider.value = Mia.blood;
+        }
+    }
+
     private void FixedUpdate()
     {
         // Call funtion PlayerMoveCommon in class PlayerMove
