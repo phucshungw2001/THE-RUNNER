@@ -2099,6 +2099,7 @@ GameObject:
   - component: {fileID: 643199335}
   - component: {fileID: 643199343}
   - component: {fileID: 643199342}
+  - component: {fileID: 643199344}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2345,6 +2346,23 @@ MonoBehaviour:
   John: {fileID: 11400000, guid: 539929e2203862e4f8b1eb81eae44cae, type: 2}
   Mia: {fileID: 11400000, guid: 9d7bf06e5e4b500489acdd4821a95845, type: 2}
   boss: {fileID: 11400000, guid: 6b596a66ec207a843934a0e329144b9e, type: 2}
+--- !u!114 &643199344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643199334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6a440ebc2508e43a6ed7f8d13fcd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: {fileID: 1879860297}
+  time: {fileID: 643199336}
+  John: {fileID: 11400000, guid: 539929e2203862e4f8b1eb81eae44cae, type: 2}
+  Mia: {fileID: 11400000, guid: 9d7bf06e5e4b500489acdd4821a95845, type: 2}
+  boss: {fileID: 11400000, guid: 7977f7c9ff28a9844875ce7a5a3ddfa9, type: 2}
 --- !u!1 &668281851
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,7 +5687,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1802613616}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1081021852}
+        m_TargetAssemblyTypeName: LoadGame, Assembly-CSharp
+        m_MethodName: LoadGameMap1
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1802613616
 MonoBehaviour:
   m_ObjectHideFlags: 0

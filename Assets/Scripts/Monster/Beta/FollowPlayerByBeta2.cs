@@ -47,6 +47,12 @@ public class FollowPlayerByBeta2 : MonoBehaviour
             }
         }
 
+        if (GameObject.FindGameObjectWithTag("boss") != null)
+        {
+            Destroy(gameObject);
+            Instantiate(expBe2, transform.position, Quaternion.identity);
+        }
+
     }
 
     void FixedUpdate()

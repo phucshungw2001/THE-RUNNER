@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCharactorA2 : MonoBehaviour
+
+public class FollowPlayerByDelta : MonoBehaviour
 {
     private GameObject player;
-    public GameObject Monstera2;
     private PlayerJohnMove playerInf;
     private PlayerMiaMove playerInf2;
-    [SerializeField] private Alpha2 al2;
+    public GameObject Delta;
+    private bool InRange;
+    [SerializeField] public Delta delta;
     [SerializeField] SpriteRenderer sprite;
-    bool InRange;
-    public GameObject expBe1;
+    // Start is called before the first frame update
+   
+
     // Update is called once per frame
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-
         playerInf = FindObjectOfType<PlayerJohnMove>();
         playerInf2 = FindObjectOfType<PlayerMiaMove>();
-
+        Vector3 differance = player.transform.position - transform.position;
+        float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         if (transform.position.x < player.transform.position.x)
         {
             sprite.flipX = false;
@@ -29,35 +31,28 @@ public class FollowCharactorA2 : MonoBehaviour
         {
             sprite.flipX = true;
         }
-        if (Vector2.Distance(transform.position, player.transform.position) > al2.AttackRangea21)
+        if (Vector2.Distance(transform.position, player.transform.position) > delta.AttackRangea31)
         {
             InRange = true;
         }
-        else
+        if (Vector2.Distance(transform.position, player.transform.position) <= delta.AttackRangea31)
         {
+
             InRange = false;
         }
-        if (GameObject.FindGameObjectWithTag("boss") != null)
-        {
-            Destroy(gameObject);
-            Instantiate(expBe1, transform.position, Quaternion.identity);
-        }
     }
+
     void FixedUpdate()
     {
         if (InRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, al2.Speed2 * Time.deltaTime);
-
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, delta.Speed3 * Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnDrawGizmos()
     {
-        if (collision.gameObject.tag == "fire" || collision.gameObject.tag == "blackHold")
-        {
-            Destroy(gameObject);
-            Instantiate(expBe1, transform.position, Quaternion.identity);
-        }
+        Gizmos.DrawWireSphere(transform.position, delta.AttackRangea31);
+        Gizmos.color = Color.red;
     }
 }

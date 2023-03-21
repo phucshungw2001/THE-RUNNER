@@ -13,9 +13,11 @@ public class HpBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            HP.maxValue = boss.bloodMaxGa;
-            boss.bloodGa = boss.bloodMaxGa;
-            HP.value = boss.bloodGa;
+        boss.bloodMaxGa = 450 * (time.Minute / 5);
+        boss.damageGa = 10 * (time.Minute / 5);
+        HP.maxValue = boss.bloodMaxGa;
+        boss.bloodGa = boss.bloodMaxGa;
+        HP.value = boss.bloodGa;
     }
 
     void Update()
