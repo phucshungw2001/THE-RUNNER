@@ -35,6 +35,11 @@ public class FollowCharactor : MonoBehaviour
         {
             InRange = false;
         }
+        if (GameObject.FindGameObjectWithTag("boss") != null)
+        {
+            Destroy(gameObject);
+            Instantiate(expBe1, transform.position, Quaternion.identity);
+        }
     }
 
     void FixedUpdate()

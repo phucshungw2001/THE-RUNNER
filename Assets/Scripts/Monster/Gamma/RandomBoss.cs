@@ -12,6 +12,7 @@ public class RandomBoss : MonoBehaviour
     [SerializeField] public GameObject main;
     [SerializeField] public GameObject HPBoss;
     private BossGamma gamma;
+    private DeltaBoss delta;
     private int count = 1;
     int a = 5;
     int rate;
@@ -31,35 +32,35 @@ public class RandomBoss : MonoBehaviour
 
     void Update()
     {
-        screenWidth = Screen.width;
-
-        screenHeight = Screen.height;
-
-
-        float screenZ = -Camera.main.transform.position.z;
-
-        Vector3 lowerLeftCornerScreen = new Vector3(0, 0, screenZ);
-
-        Vector3 upperRightCornerScreen = new Vector3(
-
-            screenWidth, screenHeight, screenZ);
-
-        Vector3 lowerLeftCornerWorld =
-
-            Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen);
-
-        Vector3 upperRightCornerWorld =
-
-            Camera.main.ScreenToWorldPoint(upperRightCornerScreen);
-
-        screenLeft = lowerLeftCornerWorld.x;
-
-        screenRight = upperRightCornerWorld.x;
-
-        screenTop = upperRightCornerWorld.y;
-
         if ((int)time.Minute == a && count == 1)
         {
+            screenWidth = Screen.width;
+
+            screenHeight = Screen.height;
+
+
+            float screenZ = -Camera.main.transform.position.z;
+
+            Vector3 lowerLeftCornerScreen = new Vector3(0, 0, screenZ);
+
+            Vector3 upperRightCornerScreen = new Vector3(
+
+                screenWidth, screenHeight, screenZ);
+
+            Vector3 lowerLeftCornerWorld =
+
+                Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen);
+
+            Vector3 upperRightCornerWorld =
+
+                Camera.main.ScreenToWorldPoint(upperRightCornerScreen);
+
+            screenLeft = lowerLeftCornerWorld.x;
+
+            screenRight = upperRightCornerWorld.x;
+
+            screenTop = upperRightCornerWorld.y;
+
             main.SetActive(false);
             HPBoss.SetActive(true);
             xPosition = Random.Range((screenLeft+screenRight)/2, (screenLeft + screenRight) / 2);
@@ -75,8 +76,6 @@ public class RandomBoss : MonoBehaviour
             }
             count = 0;
             a += 5;
-            gamma.bloodMaxGa = 450 * (a / 5);
-            gamma.damageGa += 10;
         }
 
         if (GameObject.FindGameObjectWithTag("boss") == null && count == 0)
