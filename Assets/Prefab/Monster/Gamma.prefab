@@ -173,7 +173,6 @@ MonoBehaviour:
   bulletGamma: {fileID: 7337219486519843384, guid: 55ce19e14ceeee242a49b94dc60693c1, type: 3}
   gamma: {fileID: 1884120365466620681}
   sprite: {fileID: 4507930435163102257}
-  expGa: {fileID: 2774279366344469977, guid: 7d088c1b711242145941ca4bd4d8d98a, type: 3}
 --- !u!114 &1884120365466620681
 MonoBehaviour:
   m_ObjectHideFlags: 0
