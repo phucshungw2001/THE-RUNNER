@@ -139,6 +139,7 @@ MonoBehaviour:
   be1: {fileID: 2526260467156350246}
   sprite: {fileID: 5127493846156324065}
   expBe1: {fileID: 792592381065785644, guid: 56d029e2800bd2c4bb7830670b50cc37, type: 3}
+  p: {fileID: 11400000, guid: 3d74af965fd2779498fe5d2d1061ed1b, type: 2}
 --- !u!61 &5206091111499616812
 BoxCollider2D:
   m_ObjectHideFlags: 0

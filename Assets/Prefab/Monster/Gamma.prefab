@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8454106054060199664}
   m_Layer: 0
   m_Name: Gamma
-  m_TagString: boss
+  m_TagString: bossGa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

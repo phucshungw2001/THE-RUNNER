@@ -60,7 +60,7 @@ public class RandomMonster : MonoBehaviour
 
         screenBottom = lowerLeftCornerWorld.y;
 
-        if (GameObject.FindGameObjectWithTag("boss") == null)
+        if (GameObject.FindGameObjectWithTag("boss") == null && GameObject.FindGameObjectWithTag("bossGa") == null)
         {
             CountTime += Time.deltaTime;
             timeCreate = (float)(60.01 / (60 + (time.Minute * 10)));

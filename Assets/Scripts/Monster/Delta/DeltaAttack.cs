@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 
@@ -15,9 +16,9 @@ public class DeltaAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hp = boss.Blood3;
-        boss.Blood3 = boss.Blood3;
-
+        hp = boss.BloodMax3;
+        boss.Blood3 = boss.BloodMax3;
+        Debug.Log("Delta: " + boss.Blood3);
     }
 
     // Update is called once per frame

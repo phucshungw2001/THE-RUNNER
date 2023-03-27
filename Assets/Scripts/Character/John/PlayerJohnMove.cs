@@ -36,6 +36,7 @@ public class PlayerJohnMove : MonoBehaviour
         expSlider.value = John.exp;
         expSlider.maxValue = John.expMax;
         this.isLevelUp = false;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -79,6 +80,7 @@ public class PlayerJohnMove : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "boss" || collision.gameObject.tag == "bulletGa"
+            || collision.gameObject.tag == "bossGa"
        )
         {
             John.blood = John.blood - Gamma.damageGa;

@@ -17,6 +17,7 @@ public class GammaAttack : MonoBehaviour
     void Start()
     {
         hp = boss.bloodMaxGa;
+        Debug.Log("heath" + hp);
         boss.bloodGa = boss.bloodMaxGa;
        
     }
@@ -24,6 +25,7 @@ public class GammaAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (hp <= 0)
         {
             Destroy(gameObject);
@@ -37,6 +39,7 @@ public class GammaAttack : MonoBehaviour
         {
             hp -= John.damage;
             boss.bloodGa = hp;
+  
         }
         if (collision.gameObject.tag == "fire")
         {

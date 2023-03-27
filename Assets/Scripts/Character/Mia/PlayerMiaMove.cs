@@ -36,6 +36,7 @@ public class PlayerMiaMove : MonoBehaviour
         expSlider.value = Mia.exp;
         expSlider.maxValue = Mia.expMax;
         this.isLevelUp = false;
+        Time.timeScale = 1;
     }
 
     void Update()

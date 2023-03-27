@@ -137,6 +137,7 @@ MonoBehaviour:
   al1: {fileID: 652339333932522933}
   sprite: {fileID: 652339333932522923}
   expBe1: {fileID: 792592381065785644, guid: 56d029e2800bd2c4bb7830670b50cc37, type: 3}
+  p: {fileID: 11400000, guid: 3d74af965fd2779498fe5d2d1061ed1b, type: 2}
 --- !u!50 &296553537670703941
 Rigidbody2D:
   serializedVersion: 4

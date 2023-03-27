@@ -21,7 +21,7 @@ public class BulletBlackHold : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "monster")
+        if (collision.gameObject.tag == "monster" || collision.gameObject.tag == "boss" || collision.gameObject.tag == "bossGa")
         {
             Instantiate(BlackHold, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);

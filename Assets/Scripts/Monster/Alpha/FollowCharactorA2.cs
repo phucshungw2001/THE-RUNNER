@@ -12,6 +12,7 @@ public class FollowCharactorA2 : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
     bool InRange;
     public GameObject expBe1;
+    public DetroyMonterPoint p;
     // Update is called once per frame
     void Update()
     {
@@ -37,7 +38,7 @@ public class FollowCharactorA2 : MonoBehaviour
         {
             InRange = false;
         }
-        if (GameObject.FindGameObjectWithTag("boss") != null)
+        if (GameObject.FindGameObjectWithTag("boss") != null || GameObject.FindGameObjectWithTag("bossGa") != null)
         {
             Destroy(gameObject);
             Instantiate(expBe1, transform.position, Quaternion.identity);
@@ -58,6 +59,7 @@ public class FollowCharactorA2 : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(expBe1, transform.position, Quaternion.identity);
+            p.MonsterPoint = p.MonsterPoint + 1;
         }
     }
 }

@@ -12,21 +12,20 @@ public class HpBoss : MonoBehaviour
     public BossGamma boss;
     // Start is called before the first frame update
     void Start()
-    {
-        boss.bloodMaxGa = 450 * (time.Minute / 5);
-        boss.damageGa = 10 * (time.Minute / 5);
+    {   boss.bloodGa = boss.bloodMaxGa;
         HP.maxValue = boss.bloodMaxGa;
-        boss.bloodGa = boss.bloodMaxGa;
         HP.value = boss.bloodGa;
     }
 
     void Update()
     {
-            HP.value = boss.bloodGa;
-
-            if (boss.bloodGa <= 0 && time.TimeStart <= 0)
-            {
-                time.TimeStart = 1;
-            }
+        boss.bloodMaxGa = 450 * (time.Minute / 5);
+        boss.damageGa = 10 * (time.Minute / 5);
+        HP.maxValue = boss.bloodMaxGa;
+        HP.value = boss.bloodGa;
+        if (boss.bloodGa <= 0 && time.TimeStart <= 0)
+        {
+            time.TimeStart = 1;
+        }
     }
 }
